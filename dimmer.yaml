@@ -52,8 +52,8 @@ text_sensor:
     icon: mdi:cube-outline
     entity_category: diagnostic
   - platform: ethernet_info
-    entity_category: diagnostic
     ip_address:
+      entity_category: diagnostic
       name: boneio-dimmer IP
 
 binary_sensor:
