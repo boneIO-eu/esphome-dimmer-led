@@ -50,7 +50,9 @@ text_sensor:
   - platform: version
     name: 'boneio-dimmer- Version'
     icon: mdi:cube-outline
+    entity_category: diagnostic
   - platform: ethernet_info
+    entity_category: diagnostic
     ip_address:
       name: boneio-dimmer IP
 
