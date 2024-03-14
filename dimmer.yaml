@@ -13,11 +13,11 @@ esp32:
     type: arduino
 
 external_components:
-  - source: github://boneio/esphome-LM75@main #Original source and thank you note for BTomala https://github.com/boneIO-eu/esphome-lm75
+  - source: github://boneIO-eu/esphome-LM75@main #Original source and thank you note for BTomala https://github.com/boneIO-eu/esphome-lm75
     components: [lm75]
 
 dashboard_import:
-  package_import_url: github://boneio/esphome_dimmer/dimmer.yaml@v1.0
+  package_import_url: github://boneIO-eu/esphome_dimmer/dimmer.yaml@v1.0
   import_full_config: true
 
 ethernet:
