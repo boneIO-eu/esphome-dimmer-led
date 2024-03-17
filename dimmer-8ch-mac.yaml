@@ -1,10 +1,6 @@
-substitutions:
+esphome:
   name: 'boneio-dimmer'
   friendly_name: 'BoneIO Dimmer LED'
-
-esphome:
-  name: '${name}'
-  friendly_name: '${friendly_name}'
   name_add_mac_suffix: true
   project:
     name: 'boneio.dimmer_dc'
@@ -19,7 +15,7 @@ external_components:
     components: [lm75]
 
 dashboard_import:
-  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-8ch-mac.yaml@v1.0.7
+  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-8ch.yaml@v1.0.8
   import_full_config: true
 
 ethernet:

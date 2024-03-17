@@ -1,10 +1,10 @@
 substitutions:
   name: 'boneio-dimmer'
-  friendly_name: 'BoneIO Dimmer LED'
+  friendly_name: ''
 
 esphome:
   name: '${name}'
-  friendly_name: '${friendly_name}'
+  friendly_name: 'BoneIO Dimmer LED'
   name_add_mac_suffix: false
   project:
     name: 'boneio.dimmer_dc'
