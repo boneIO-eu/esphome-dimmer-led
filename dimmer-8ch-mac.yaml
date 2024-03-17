@@ -5,7 +5,7 @@ substitutions:
 esphome:
   name: '${name}'
   friendly_name: '${friendly_name}'
-  name_add_mac_suffix: false
+  name_add_mac_suffix: true
   project:
     name: 'boneio.dimmer_dc'
     version: '1.0'
@@ -19,7 +19,7 @@ external_components:
     components: [lm75]
 
 dashboard_import:
-  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-rgbw.yaml@v1.0.7
+  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-8ch-mac.yaml@v1.0.7
   import_full_config: true
 
 ethernet:
@@ -121,20 +121,53 @@ binary_sensor:
       inverted: true
 
 light:
-  - platform: rgbw
-    name: 'RGBW L'
-    red: chl01
-    green: chl02
-    blue: chl03
-    white: chl04
+  - platform: monochromatic
+    output: chl01
+    name: 'CHL 01'
+    id: chl_01
     default_transition_length: 2s
     gamma_correct: 0
-  - platform: rgbw
-    name: 'RGBW R'
-    red: chr01
-    green: chr02
-    blue: chr03
-    white: chr04
+  - platform: monochromatic
+    output: chl02
+    name: 'CHL 02'
+    id: chl_02
+    default_transition_length: 2s
+    gamma_correct: 0
+  - platform: monochromatic
+    output: chl03
+    name: 'CHL 03'
+    id: chl_03
+    default_transition_length: 2s
+    gamma_correct: 0
+  - platform: monochromatic
+    output: chl04
+    name: 'CHL 04'
+    id: chl_04
+    default_transition_length: 2s
+    gamma_correct: 0
+
+  - platform: monochromatic
+    output: chr01
+    name: 'CHR 01'
+    id: chr_01
+    default_transition_length: 2s
+    gamma_correct: 0
+  - platform: monochromatic
+    output: chr02
+    name: 'CHR 02'
+    id: chr_02
+    default_transition_length: 2s
+    gamma_correct: 0
+  - platform: monochromatic
+    output: chr03
+    name: 'CHR 03'
+    id: chr_03
+    default_transition_length: 2s
+    gamma_correct: 0
+  - platform: monochromatic
+    output: chr04
+    name: 'CHR 04'
+    id: chr_04
     default_transition_length: 2s
     gamma_correct: 0
 
