@@ -5,21 +5,19 @@ substitutions:
 esphome:
   name: '${name}'
   friendly_name: '${friendly_name}'
-  name_add_mac_suffix: false
+  name_add_mac_suffix: true
   project:
     name: 'boneio.dimmer_dc'
     version: '1.0'
 esp32:
   board: esp32dev
-  framework:
-    type: arduino
 
 external_components:
   - source: github://boneIO-eu/esphome-LM75@main #Original source and thank you note for BTomala https://github.com/boneIO-eu/esphome-lm75
     components: [lm75]
 
 dashboard_import:
-  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-rgbw.yaml@v1.0.9
+  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-rgbw.yaml@v1.0.10
   import_full_config: true
 
 ethernet:
@@ -40,11 +38,10 @@ i2c:
 pcf8574:
   - id: 'pcf_inputs'
     address: 0x38
-logger:
 
+logger:
 api:
 ota:
-
 web_server:
   port: 80
 
@@ -206,7 +203,6 @@ sensor:
     max_voltage: 32V
     max_current: 3.2A
     update_interval: 5s
-
   - platform: ina219
     address: 0x41
     shunt_resistance: 1.0 ohm
@@ -224,6 +220,7 @@ sensor:
     max_voltage: 32V
     max_current: 3.2A
     update_interval: 5s
+
 switch:
   - platform: gpio
     id: buzzer

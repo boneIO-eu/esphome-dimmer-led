@@ -16,7 +16,7 @@ external_components:
     components: [lm75]
 
 dashboard_import:
-  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-8ch.yaml@v1.0.9
+  package_import_url: github://boneIO-eu/esphome-dimmer-led/dimmer-8ch.yaml@v1.0.10
   import_full_config: true
 
 ethernet:
@@ -37,11 +37,10 @@ i2c:
 pcf8574:
   - id: 'pcf_inputs'
     address: 0x38
-logger:
 
+logger:
 api:
 ota:
-
 web_server:
   port: 80
 
@@ -236,7 +235,6 @@ sensor:
     max_voltage: 32V
     max_current: 3.2A
     update_interval: 5s
-
   - platform: ina219
     address: 0x41
     shunt_resistance: 1.0 ohm
@@ -254,6 +252,7 @@ sensor:
     max_voltage: 32V
     max_current: 3.2A
     update_interval: 5s
+
 switch:
   - platform: gpio
     id: buzzer
